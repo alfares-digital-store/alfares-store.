@@ -1,39 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 body {
-  background-color: #0b0f19;
-  color: #f1f5f9;
-  direction: rtl;
-  text-align: right;
-  line-height: 1.5;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ترويسة الموقع */
 .hero {
   text-align: center;
-  padding: 40px 15px 25px;
-  background: radial-gradient(circle at top, #1e293b, #0b0f19);
-  border-bottom: 1px solid #1e293b;
+  padding: 40px 15px 20px;
+  background: radial-gradient(circle at top, #1f293d 0%, #0d1117 70%);
 }
 
-.site-logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 2px solid #d4af37;
-  object-fit: cover;
+.logo-wrapper img {
+  max-width: 90px;
+  height: auto;
   margin-bottom: 12px;
 }
 
-.top-tag {
+.brand-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #58a6ff;
+  letter-spacing: 1px;
+}
+
+.brand-subtitle {
+  font-size: 1rem;
+  color: #8b949e;
+  margin-top: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  flex: 1;
+  width: 100%;
+}
+
+/* التنسيق الشبكي: يجعل البطاقات جنباً إلى جنب حتى على الشاشات المتوسطة والصغيرة */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* بطاقة المنتج */
+.card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #58a6ff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.category-badge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.badge-red {
+  background: rgba(255, 77, 77, 0.15);
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+.badge-yellow {
+  background: rgba(255, 204, 0, 0.15);
+  color: #ffcc00;
+  border: 1px solid rgba(255, 204, 0, 0.3);
+}
+
+.badge-cyan {
+  background: rgba(0, 210, 255, 0.15);
+  color: #00d2ff;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.product-img-box {
+  width: 100%;
+  height: 140px;
+  background-color: #0d1117;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border: 1px solid #21262d;
+}
+
+.product-img-box img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: #8b949e;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.price-text {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.btn-action {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #238636;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-action:hover {
+  background-color: #2ea043;
+}
+
+.btn-red {
+  background-color: #b32626;
+}
+.btn-red:hover {
+  background-color: #d32f2f;
+}
+
+.btn-yellow {
+  background-color: #c99700;
+  color: #000;
+}
+.btn-yellow:hover {
+  background-color: #e0aa00;
+}
+
+.footer {
+  text-align: center;
+  padding: 25px 15px;
+  border-top: 1px solid #21262d;
+  color: #6e7681;
   font-size: 0.85rem;
-  color: #d4af37;
-  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+/* دعم شاشات الهاتف الصغيرة لجعل البطاقات كرتين بجانب بعض */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .card {
+    padding: 12px;
+  }
+  .card-title {
+    font-size: 0.95rem;
+  }
+  .product-img-box {
+    height: 100px;
+  }
+  .card-desc {
+    font-size: 0.78rem;
+  }
+  .btn-action {
+    font-size: 0.82rem;
+    padding: 8px;
+  }
+}
   font-weight: 700;
   display: block;
 }
