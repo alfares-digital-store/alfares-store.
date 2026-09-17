@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALFARES DIGITAL | الفارس ديجيتال</title>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
   <style>
+    /* تثبيت التنسيق الشبكي: كرتين متجاورين في الصف على الهاتف */
     .container {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 15px 10px;
+      padding: 10px 8px;
     }
     .grid {
       display: grid !important;
@@ -28,40 +29,76 @@
       }
     }
     .card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
       padding: 10px !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: space-between !important;
     }
-    .product-img-box {
-      height: 105px !important;
-      margin-bottom: 8px !important;
-    }
-    .product-img-box img {
-      max-width: 90% !important;
-      max-height: 90% !important;
-      object-fit: contain !important;
+    .category-badge {
+      font-size: 0.68rem !important;
+      padding: 2px 7px !important;
+      border-radius: 10px;
+      margin-bottom: 6px !important;
+      align-self: flex-start;
+      font-weight: bold;
     }
     .card-title {
-      font-size: 0.9rem !important;
-      margin-bottom: 5px !important;
+      font-size: 0.88rem !important;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px !important;
+      line-height: 1.25;
+      min-height: 2.3em;
+    }
+    .product-img-box {
+      width: 100%;
+      height: 100px !important;
+      background: #0d1117;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 8px !important;
+      border: 1px solid #21262d;
+    }
+    .product-img-box img {
+      max-width: 85% !important;
+      max-height: 85% !important;
+      object-fit: contain !important;
     }
     .card-desc {
       font-size: 0.72rem !important;
-      line-height: 1.3 !important;
+      color: #8b949e;
+      line-height: 1.35 !important;
+      margin-bottom: 8px !important;
+      flex-grow: 1;
+    }
+    .price-text {
+      font-size: 0.78rem !important;
+      font-weight: bold;
       margin-bottom: 8px !important;
     }
     .btn-action {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.76rem !important;
+      font-weight: bold;
       padding: 7px 4px !important;
-      font-size: 0.78rem !important;
+      border-radius: 6px;
+      color: #fff;
     }
     .footer {
       text-align: center;
-      padding: 25px 10px;
-      margin-top: 30px;
+      padding: 20px 10px;
+      margin-top: 25px;
       border-top: 1px solid #21262d;
       color: #6e7681;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
   </style>
 </head>
@@ -81,73 +118,73 @@
       <!-- 1. سيرفر شامنا Shamna IPTV -->
       <div class="card">
         <span class="category-badge badge-red">IPTV & TV</span>
-        <h3 class="card-title">سيرفر شامنا (Shamna IPTV)</h3>
+        <h3 class="card-title">سيرفر شامنا (IPTV)</h3>
         <div class="product-img-box">
           <img src="images/shamna.png" alt="Shamna IPTV" onerror="this.src='images/shamna.jpg'">
         </div>
-        <p class="card-desc">بث مباشر فائق الثبات، يضم باقة القنوات المشفرة، الدوريات العالمية، وأحدث الأفلام والمسلسلات.</p>
-        <div class="price-text" style="color: #ff4d4d;">ثبات وسرعة عالية</div>
-        <a class="btn-action btn-red" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D8%B3%D9%8A%D8%B1%D9%81%D8%B1%20%D8%B4%D8%A7%D9%85%D9%86%D8%A7%20Shamna%20IPTV" target="_blank">طلب اشتراك شامنا</a>
+        <p class="card-desc">بث مباشر فائق الثبات، القنوات الرياضية والمشفرة مع مكتبة أفلام ومسلسلات ضخمة.</p>
+        <div class="price-text" style="color: #ff4d4d;">ثبات وسرعة فائقة</div>
+        <a class="btn-action btn-red" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D8%B3%D9%8A%D8%B1%D9%81%D8%B1%20%D8%B4%D8%A7%D9%85%D9%86%D8%A7" target="_blank">طلب اشتراك شامنا</a>
       </div>
 
       <!-- 2. تحويل رصيد وكاش MTN -->
       <div class="card">
         <span class="category-badge badge-yellow">MTN Services</span>
-        <h3 class="card-title">تحويل رصيد وكاش MTN</h3>
+        <h3 class="card-title">رصيد وكاش MTN</h3>
         <div class="product-img-box">
           <img src="images/mtn.png" alt="MTN" onerror="this.src='images/mtn.jpg'">
         </div>
-        <p class="card-desc">شحن رصيد وباقات إنترنت وخدمات كاش لخطوط MTN فورياً وبأعلى معايير الأمان والسرعة.</p>
-        <div class="price-text" style="color: #ffcc00;">فوري ومباشر</div>
+        <p class="card-desc">شحن فوري لرصيد وباقات الإنترنت وخدمات كاش MTN بأعلى سرعة وأمان.</p>
+        <div class="price-text" style="color: #ffcc00;">شحن فوري ومباشر</div>
         <a class="btn-action btn-yellow" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%B4%D8%AD%D9%86%20%D8%A3%D9%88%20%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20MTN" target="_blank">طلب تحويل MTN</a>
       </div>
 
-      <!-- 3. اشتراك كاب كات برو CapCut Pro -->
+      <!-- 3. كاب كات برو CapCut Pro -->
       <div class="card">
         <span class="category-badge badge-cyan">Design & Video</span>
-        <h3 class="card-title">اشتراك كاب كات برو (CapCut Pro)</h3>
+        <h3 class="card-title">كاب كات برو (CapCut)</h3>
         <div class="product-img-box">
           <img src="images/capcut.jpg" alt="CapCut Pro" onerror="this.src='images/capcut.png'">
         </div>
-        <p class="card-desc">تفعيل رسمي لكافة مؤثرات وقوالب الذكاء الاصطناعي وبدون علامة مائية باشتراكات شهرية وسنوية.</p>
-        <div class="price-text" style="color: #00d2ff;">متوفر باقات شهرية وسنوية</div>
-        <a class="btn-action" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20CapCut%20Pro" target="_blank">طلب اشتراك CapCut</a>
+        <p class="card-desc">فتح مميزات الذكاء الاصطناعي والمؤثرات الاحترافية بدون علامة مائية.</p>
+        <div class="price-text" style="color: #00d2ff;">باقات شهرية وسنوية</div>
+        <a class="btn-action" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20CapCut%20Pro" target="_blank">طلب CapCut Pro</a>
       </div>
 
-      <!-- 4. خدمات دعم إنستغرام Instagram -->
+      <!-- 4. خدمات إنستغرام Instagram -->
       <div class="card">
         <span class="category-badge badge-red">Social Media</span>
-        <h3 class="card-title">خدمات دعم إنستغرام (Instagram)</h3>
+        <h3 class="card-title">دعم إنستغرام</h3>
         <div class="product-img-box">
-          <img src="images/instagram.jpg" alt="Instagram Services" onerror="this.src='images/instagram.png'">
+          <img src="images/instagram.jpg" alt="Instagram" onerror="this.src='images/instagram.png'">
         </div>
-        <p class="card-desc">متابعين، إعجابات، مشاهدات وتفاعل حقيقي لرفع حسابك والوصول للصدارة بسرعة وأمان تام.</p>
-        <div class="price-text" style="color: #ff4d4d;">ارفع تفاعلك وكن بالصدارة</div>
-        <a class="btn-action btn-red" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A5%D9%86%D8%B3%D8%AA%D8%BA%D8%B1%D8%A7%D9%85" target="_blank">طلب دعم إنستغرام</a>
+        <p class="card-desc">زيادة متابعين، لايكات، ومشاهدات حقيقية لرفع تفاعل الحساب وضمان انتشاره.</p>
+        <div class="price-text" style="color: #ff4d4d;">تفاعل حقيقي وآمن</div>
+        <a class="btn-action btn-red" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A5%D9%86%D8%B3%D8%AA%D8%BA%D8%B1%D8%A7%D9%85" target="_blank">طلب دعم إنستغرام</a>
       </div>
 
-      <!-- 5. اشتراك جيميني برو Gemini Pro -->
+      <!-- 5. جيميني برو Gemini Pro -->
       <div class="card">
-        <span class="category-badge badge-cyan">AI & Tools</span>
-        <h3 class="card-title">اشتراك جيميني برو (Gemini Pro)</h3>
+        <span class="category-badge badge-cyan">AI Tools</span>
+        <h3 class="card-title">جيميني برو (Gemini)</h3>
         <div class="product-img-box">
           <img src="images/gemini.jpg" alt="Gemini Pro" onerror="this.src='images/gemini.png'">
         </div>
-        <p class="card-desc">تفعيل باقات Google Gemini Pro الفائقة للسرعة، كتابة المحتوى، والتحليل المتقدم.</p>
-        <div class="price-text" style="color: #00d2ff;">تفعيل رسمي وسريع</div>
-        <a class="btn-action" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D8%AC%D9%8A%D9%85%D9%8A%D9%86%D9%8A%20%D8%A8%D8%B1%D9%88%20Gemini%20Pro" target="_blank">طلب اشتراك Gemini Pro</a>
+        <p class="card-desc">ذكاء اصطناعي فائق السرعة لكتابة المحتوى، الترجمة، والتحليل المتقدم.</p>
+        <div class="price-text" style="color: #00d2ff;">تفعيل رسمي سريع</div>
+        <a class="btn-action" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20Gemini%20Pro" target="_blank">طلب Gemini Pro</a>
       </div>
 
-      <!-- 6. اشتراك كانفا برو Canva Pro -->
+      <!-- 6. كانفا برو Canva Pro -->
       <div class="card">
-        <span class="category-badge badge-cyan">Design & Tools</span>
-        <h3 class="card-title">اشتراك كانفا برو (Canva Pro)</h3>
+        <span class="category-badge badge-cyan">Design</span>
+        <h3 class="card-title">كانفا برو (Canva)</h3>
         <div class="product-img-box">
           <img src="images/canva.jpg" alt="Canva Pro" onerror="this.src='images/canva.png'">
         </div>
-        <p class="card-desc">تفعيل اشتراك Canva Pro للوصول لجميع القوالب المدفوعة وتصدير التصاميم بأعلى جودة.</p>
+        <p class="card-desc">تفعيل الحساب للوصول لكافة القوالب المدفوعة وتصدير التصاميم بأعلى دقة.</p>
         <div class="price-text" style="color: #00d2ff;">تفعيل رسمي ومباشر</div>
-        <a class="btn-action" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%83%D8%A7%D9%86%D9%81%D8%A7%20%D8%A8%D8%B1%D9%88%20Canva%20Pro" target="_blank">طلب اشتراك Canva Pro</a>
+        <a class="btn-action" href="https://wa.me/963951256423?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20Canva%20Pro" target="_blank">طلب Canva Pro</a>
       </div>
 
     </div>
@@ -160,4 +197,3 @@
 </body>
 </html>
 
-        
